@@ -19,3 +19,9 @@ Alignment with RLHF
 risks : Catastrophic forgetting
 
 solutions : Use PEFT to finetune only a set of parameters and freeze the original ones
+
+### Plan
+
+-FlanT5:
+- [Finetune Flan T5](https://www.philschmid.de/fine-tune-flan-t5)
+- 
