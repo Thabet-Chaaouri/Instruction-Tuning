@@ -23,5 +23,24 @@ solutions : Use PEFT to finetune only a set of parameters and freeze the origina
 ### Plan
 
 -FlanT5:
-- [Finetune Flan T5](https://www.philschmid.de/fine-tune-flan-t5)
-- 
+- [Finetune base Flan T5](https://www.philschmid.de/fine-tune-flan-t5)
+- [Finetune XL/XXL Flan T5 with deepspeed](https://www.philschmid.de/fine-tune-flan-t5-deepspeed)
+- [Finetune XXL Flan T5 with Lora](https://www.philschmid.de/fine-tune-flan-t5-peft)
+
+-Bloom:
+- [Finetune 7B BLOOMZ with lora](https://www.philschmid.de/bloom-sagemaker-peft)
+
+-LLAMA2:
+- [Ressources about LLama2](https://www.philschmid.de/llama-2)
+- [Finetune LLAMA2 using Qlora](https://www.philschmid.de/sagemaker-llama2-qlora)
+- [Instruction tuning LLama2 with trl and SFTTrainer](https://www.philschmid.de/instruction-tune-llama-2)
+- [Deploying LLama2 on Sagemaker](https://www.philschmid.de/sagemaker-llama-llm)
+
+-Falcon:
+- [Finetune Falcon with QLora](https://www.philschmid.de/sagemaker-falcon-qlora)
+- [Finetune Falcon using Qlora with Flash Attention](https://www.philschmid.de/sagemaker-falcon-180b-qlora)
+- [Finetune Falcon with deepspeed and Lora](https://www.philschmid.de/deepspeed-lora-flash-attention)
+
+
+-Compare GPTQ and bnb:
+- [GPTQ and Hugging Face Optimum](https://www.philschmid.de/gptq-llama)
