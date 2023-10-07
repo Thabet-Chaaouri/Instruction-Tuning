@@ -23,7 +23,7 @@ solutions : Use PEFT to finetune only a set of parameters and freeze the origina
 ### Plan
 
 -FlanT5:
-- [Finetune base Flan T5](https://www.philschmid.de/fine-tune-flan-t5)
+- [Finetune base Flan T5](https://www.philschmid.de/fine-tune-flan-t5) : used Trainer on T4 free colab with a combination of train_batch_size=32, gradient_checkpointing, fp16 mixed precision and it takes 4 hours of training duration.
 - [Finetune XL/XXL Flan T5 with deepspeed](https://www.philschmid.de/fine-tune-flan-t5-deepspeed)
 - [Finetune XXL Flan T5 with Lora](https://www.philschmid.de/fine-tune-flan-t5-peft)
 
