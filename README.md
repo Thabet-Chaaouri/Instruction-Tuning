@@ -23,8 +23,8 @@ solutions : Use PEFT to finetune only a set of parameters and freeze the origina
 ### Plan
 
 -FlanT5:
-- [Finetune base Flan T5](https://www.philschmid.de/fine-tune-flan-t5) : used Trainer on T4 free colab with a combination of train_batch_size=32, gradient_checkpointing, fp16 mixed precision and it takes 4 hours of training duration. T5 base is 250M model
-- [Finetune XL/XXL Flan T5 with deepspeed](https://www.philschmid.de/fine-tune-flan-t5-deepspeed)
+- [Finetune base Flan T5](https://www.philschmid.de/fine-tune-flan-t5) : To reproduce the same experiment I had to use the Trainer on a T4 free colab but with a gradient_checkpointing and a combination of train_batch_size=32, fp16 mixed precision (I didn't finish the training, but it is said that fp16 leads to overflow issues with T5). It took 4 hours of training duration for the T5 base model (which is 250M parameters large). I tried to run the same experiment on a colab pro with NVIDIA V100 but it didn't work. I suppose that the memory of the p3.2xlarge AWS EC2 Instance use in the tutorial is a little bit larger.
+- [Finetune XL/XXL Flan T5 with deepspeed](https://www.philschmid.de/fine-tune-flan-t5-deepspeed) : The XXL FLAN T5 is an 11B model. there is no way to fully finetune the model in colab. the tutorial uses deepspeed on large EC2 instances with multiple GPUs. It starts with the preprocessing outside of the GPU instance then loading the tokenized dataset from disk and the deepspeed config file in the train script
 - [Finetune XXL Flan T5 with Lora](https://www.philschmid.de/fine-tune-flan-t5-peft)
 
 -Bloom:
