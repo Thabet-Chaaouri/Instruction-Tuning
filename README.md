@@ -30,8 +30,13 @@ It starts with the preprocessing outside of the GPU instance then loading the to
 Actually different experiments were conducted in this tutorial using different config deepspeed files:
 ![Screenshot](sdlkheio.PNG)
 As fp16 can overflow, bf16 is the better choice because it provides significant advantages over fp32. We see also that it is better to keep a small batch size and not do offloading than the other way around. 
-- [Finetune XXL Flan T5 with Lora](https://www.philschmid.de/fine-tune-flan-t5-peft) : In this tutorial, the 11B FLAN-T5 XXL was finetuned using Lora and 8bit quantization(bnb) from Peft. The 
-same techniques were used for data preprocessing. 
+- [Finetune XXL Flan T5 with Lora](https://www.philschmid.de/fine-tune-flan-t5-peft) : In this tutorial, the 11B FLAN-T5 XXL was finetuned using Lora and 8bit quantization(bnb) from Peft.
+The same techniques were used for data preprocessing.
+The only differences was the construction of the peft model and the preparing for int8 training:
+![Screenshot](Peft_training.PNG)
+This configuration uses only 0.16% of the parameters of the model. The training took 10h and cost ~13.22$. A full fine-tuning on FLAN-T5-XXL with the same duration (10h) requires 8x A100 40GBs and costs ~322$.
+During evaluation, the results were slightly better than a full finetuning of FLAN-T5 base.
+
 -Bloom:
 - [Finetune 7B BLOOMZ with lora](https://www.philschmid.de/bloom-sagemaker-peft)
 
