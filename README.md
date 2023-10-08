@@ -27,8 +27,8 @@ solutions : Use PEFT to finetune only a set of parameters and freeze the origina
 - [Finetune XL/XXL Flan T5 with deepspeed](https://www.philschmid.de/fine-tune-flan-t5-deepspeed) : The XXL FLAN T5 is an 11B model. there is no way to fully finetune the model in colab. the tutorial uses deepspeed on large EC2 instances with multiple GPUs.
 It starts with the preprocessing outside of the GPU instance then loading the tokenized dataset from disk and the deepspeed config file in the train script like this :
 ![Screenshot](sdfrere.PNG)
-Actually different experiments xere conducted in this tutorial using different config deepspeed files:
-
+Actually different experiments were conducted in this tutorial using different config deepspeed files:
+![Screenshot](sdlkheio.PNG)
 
 - [Finetune XXL Flan T5 with Lora](https://www.philschmid.de/fine-tune-flan-t5-peft)
 
