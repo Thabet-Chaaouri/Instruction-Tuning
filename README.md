@@ -29,6 +29,7 @@ It starts with the preprocessing outside of the GPU instance then loading the to
 ![Screenshot](sdfrere.PNG)
 Actually different experiments were conducted in this tutorial using different config deepspeed files:
 ![Screenshot](sdlkheio.PNG)
+As fp16 can overflow, bf16 is the better choice because it provides significant advantages over fp32. We see also that it is better to keep a small batch size and not do offloading than the other way around. 
 
 - [Finetune XXL Flan T5 with Lora](https://www.philschmid.de/fine-tune-flan-t5-peft)
 
