@@ -41,8 +41,10 @@ Another notebook was created for comparing full fine-tuning and Peft lora fine-t
 
 -Bloom:
 
-training a 176 Billion parameter model
+Training a 176 Billion parameter model needed the following hardware/software : 
+
 ![Screenshot](BLOOM.PNG)
+
 - [Finetune 7B BLOOMZ with lora](https://www.philschmid.de/bloom-sagemaker-peft) : BLOOMZ 7b1 is the finetuned version from the pretrained [bloom 7b1](https://huggingface.co/bigscience/bloom-7b1). there is also a finetuned version for prompting in non english (ex: French) [bloomz-7b1-mt](https://huggingface.co/bigscience/bloomz-7b1-mt) a 7B parameters model, and a bigger one [bloomz-mt](https://huggingface.co/bigscience/bloomz-mt) of 176B parameters. The mt versions are finetuned on xP3mt, a Mixture of 13 training tasks in 46 languages with prompts in 20 languages (machine-translated from English).
 
 -LLAMA2:
