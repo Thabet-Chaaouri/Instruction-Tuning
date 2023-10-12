@@ -40,7 +40,7 @@ During evaluation, the results were slightly better than a full finetuning of FL
 Another notebook was created for comparing full fine-tuning and Peft lora fine-tuning on the base FLAN-T5. [Colab notebook](https://colab.research.google.com/drive/18EzRa2oSfjOQBYz1SnCnmjLMn-X4S01h?usp=sharing)
 
 -Bloom:
-- [Finetune 7B BLOOMZ with lora](https://www.philschmid.de/bloom-sagemaker-peft)
+- [Finetune 7B BLOOMZ with lora](https://www.philschmid.de/bloom-sagemaker-peft) : BLOOMZ 7b1 is the finetuned version from the pretrained [bloom 7b1](https://huggingface.co/bigscience/bloom-7b1). there is also a finetuned version for prompting in non english (ex: French) [bloomz-7b1-mt](https://huggingface.co/bigscience/bloomz-7b1-mt) a 7B parameters model, and a bigger one [bloomz-mt](https://huggingface.co/bigscience/bloomz-mt).
 
 -LLAMA2:
 - [Ressources about LLama2](https://www.philschmid.de/llama-2)
