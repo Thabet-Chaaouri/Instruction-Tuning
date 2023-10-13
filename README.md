@@ -29,11 +29,11 @@ FLAN fine-tunes T5 on a large set of varied instructions that use a simple and i
 ![Screenshot](FLAN_instructiontuning.PNG)
 
 FLAN-T5 model comes with many variants based on the numbers of parameters.
-  -   FLAN-T5 small (60M)
-  -   FLAN-T5 base (250M)
-  -   FLAN-T5 large (780M)
-  -   FLAN-T5 XL (3B)
-  -   FLAN-T5 XXL (11B)
+  *   FLAN-T5 small (60M)
+  *   FLAN-T5 base (250M)
+  *   FLAN-T5 large (780M)
+  *   FLAN-T5 XL (3B)
+  *   FLAN-T5 XXL (11B)
 
 - [Finetune base Flan T5](https://www.philschmid.de/fine-tune-flan-t5) : To reproduce the same experiment I had to use the Trainer on a T4 free colab but with a gradient_checkpointing and a combination of train_batch_size=32, fp16 mixed precision (I didn't finish the training, but it is said that fp16 leads to overflow issues with T5). It took 4 hours of training duration for the T5 base model (which is 250M parameters large). I tried to run the same experiment on a colab pro with NVIDIA V100 but it didn't work. I suppose that the memory of the p3.2xlarge AWS EC2 Instance use in the tutorial is a little bit larger. [Colab notebook](https://colab.research.google.com/drive/1_RZgtC-_cZUCrInpsLQwmZrIY-ijvNFR?usp=sharing)
 - [Finetune XL/XXL Flan T5 with deepspeed](https://www.philschmid.de/fine-tune-flan-t5-deepspeed) : The XXL FLAN T5 is an 11B model. there is no way to fully finetune the model in colab. the tutorial uses deepspeed on large EC2 instances with multiple GPUs.
