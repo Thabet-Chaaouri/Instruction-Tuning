@@ -63,6 +63,9 @@ Training a 176 Billion parameter model needed the following hardware/software :
 -LLAMA2:
 
 LLaMA 2 is a large language model developed by Meta and is the successor to LLaMA 1. LLaMA 2 pretrained models are trained on 2 trillion tokens, and have double the context length than LLaMA 1. Its fine-tuned models have been trained on over 1 million human annotations.
+
+![Screenshot](LLAMA2.PNG)
+
 - [Ressources about LLama2](https://www.philschmid.de/llama-2)
 - [Finetune LLAMA2 using Qlora](https://www.philschmid.de/sagemaker-llama2-qlora)
 - [Instruction tuning LLama2 with trl and SFTTrainer](https://www.philschmid.de/instruction-tune-llama-2)
