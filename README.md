@@ -28,7 +28,8 @@ FLAN fine-tunes T5 on a large set of varied instructions that use a simple and i
 
 ![Screenshot](FLAN_instructiontuning.PNG)
 
-FLAN-T5 model comes with many variants based on the numbers of parameters: 
+FLAN-T5 model comes with many variants based on the numbers of parameters:
+
 ** FLAN-T5 small (60M)
 ** FLAN-T5 base (250M)
 ** FLAN-T5 large (780M)
