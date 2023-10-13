@@ -69,7 +69,7 @@ LLaMA 2 is a large language model developed by Meta and is the successor to LLaM
 
 Llama 2 outperforms other open source language models on many external benchmarks, including reasoning, coding, proficiency, and knowledge tests.
 
-![Screenshot](LLAMA2.PNG)
+![Screenshot](LLAMA_eval.PNG)
 
 - [Ressources about LLama2](https://www.philschmid.de/llama-2)
 - [Finetune LLAMA2 using Qlora](https://www.philschmid.de/sagemaker-llama2-qlora)
