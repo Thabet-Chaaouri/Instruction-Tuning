@@ -61,6 +61,8 @@ Training a 176 Billion parameter model needed the following hardware/software :
 - [Finetune 7B BLOOMZ with lora](https://www.philschmid.de/bloom-sagemaker-peft) : BLOOMZ 7b1 is the finetuned version from the pretrained [bloom 7b1](https://huggingface.co/bigscience/bloom-7b1). there is also a finetuned version for prompting in non english (ex: French) [bloomz-7b1-mt](https://huggingface.co/bigscience/bloomz-7b1-mt) a 7B parameters model, and a bigger one [bloomz-mt](https://huggingface.co/bigscience/bloomz-mt) of 176B parameters. The mt versions are finetuned on xP3mt, a Mixture of 13 training tasks in 46 languages with prompts in 20 languages (machine-translated from English).
 
 -LLAMA2:
+
+LLaMA 2 is a large language model developed by Meta and is the successor to LLaMA 1. LLaMA 2 pretrained models are trained on 2 trillion tokens, and have double the context length than LLaMA 1. Its fine-tuned models have been trained on over 1 million human annotations.
 - [Ressources about LLama2](https://www.philschmid.de/llama-2)
 - [Finetune LLAMA2 using Qlora](https://www.philschmid.de/sagemaker-llama2-qlora)
 - [Instruction tuning LLama2 with trl and SFTTrainer](https://www.philschmid.de/instruction-tune-llama-2)
