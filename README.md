@@ -71,6 +71,8 @@ Llama 2 outperforms other open source language models on many external benchmark
 
 ![Screenshot](LLAMA_eval.PNG)
 
+However, the most exciting part of this release is the fine-tuned models (Llama 2-Chat), which have been optimized for dialogue applications using Reinforcement Learning from Human Feedback (RLHF).
+
 - [Ressources about LLama2](https://www.philschmid.de/llama-2)
 - [Finetune LLAMA2 using Qlora](https://www.philschmid.de/sagemaker-llama2-qlora)
 - [Instruction tuning LLama2 with trl and SFTTrainer](https://www.philschmid.de/instruction-tune-llama-2)
