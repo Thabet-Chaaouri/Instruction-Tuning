@@ -77,14 +77,13 @@ However, the most exciting part of this release is the fine-tuned models (Llama 
 
 - [Instruction tuning LLama2 with trl and SFTTrainer](https://www.philschmid.de/instruction-tune-llama-2)
   In this blog, it was used trl and SFTTrainer with Qlora to fine-tune Llama 7b version (not the chat version). To do so, bitsandbytes was used with some special Llama configurations to load the model in 4bit:
-  ![Screenshot](Load_Llama.PNG).
+  ![Screenshot](Load_Llama.PNG)
   The lora adapters were prepared as usual:
-  ![Screenshot](Lora_adapters.PNG).
+  ![Screenshot](Lora_adapters.PNG)
   Finally, the trainer is prepared with trl:
-  ![Screenshot](trl_trainer.PNG).
-  
+  ![Screenshot](trl_trainer.PNG)
 
-  
+  Note that this way, we did not have to do the tokenization (with the truncation & padding) nor preparing the data collators beforehand. The SFTTrainer from trl took care of that. 
    
 - [Finetune LLAMA2 using Qlora](https://www.philschmid.de/sagemaker-llama2-qlora)
 - [Deploying LLama2 on Sagemaker](https://www.philschmid.de/sagemaker-llama-llm)
