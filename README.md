@@ -62,6 +62,8 @@ Training a 176 Billion parameter model needed the following hardware/software :
 
 -LLAMA2:
 
+- Checkout [Ressources about LLama2](https://www.philschmid.de/llama-2)
+
 LLaMA 2 is a large language model developed by Meta and is the successor to LLaMA 1. LLaMA 2 pretrained models are trained on 2 trillion tokens, and have double the context length than LLaMA 1. Its fine-tuned models have been trained on over 1 million human annotations.
 
 ![Screenshot](LLAMA2.PNG)
@@ -73,9 +75,18 @@ Llama 2 outperforms other open source language models on many external benchmark
 
 However, the most exciting part of this release is the fine-tuned models (Llama 2-Chat), which have been optimized for dialogue applications using Reinforcement Learning from Human Feedback (RLHF).
 
-- [Ressources about LLama2](https://www.philschmid.de/llama-2)
-- [Finetune LLAMA2 using Qlora](https://www.philschmid.de/sagemaker-llama2-qlora)
 - [Instruction tuning LLama2 with trl and SFTTrainer](https://www.philschmid.de/instruction-tune-llama-2)
+  In this blog, it was used trl and SFTTrainer with Qlora to fine-tune Llama 7b version (not the chat version). To do so, bitsandbytes was used with some special Llama configurations to load the model in 4bit:
+  ![Screenshot](Load_Llama.PNG).
+  The lora adapters were prepared as usual:
+  ![Screenshot](Lora_adapters.PNG).
+  Finally, the trainer is prepared with trl:
+  ![Screenshot](trl_trainer.PNG).
+  
+
+  
+   
+- [Finetune LLAMA2 using Qlora](https://www.philschmid.de/sagemaker-llama2-qlora)
 - [Deploying LLama2 on Sagemaker](https://www.philschmid.de/sagemaker-llama-llm)
 
 -Falcon:
