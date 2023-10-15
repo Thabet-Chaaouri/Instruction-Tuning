@@ -93,6 +93,8 @@ However, the most exciting part of this release is the fine-tuned models (Llama 
 - [Finetune Falcon using Qlora with Flash Attention](https://www.philschmid.de/sagemaker-falcon-180b-qlora)
 - [Finetune Falcon with deepspeed and Lora](https://www.philschmid.de/deepspeed-lora-flash-attention)
 
+-Mistral:
+
 
 -Compare GPTQ and bnb:
 - [GPTQ and Hugging Face Optimum](https://www.philschmid.de/gptq-llama)
