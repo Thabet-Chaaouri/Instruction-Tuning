@@ -2,7 +2,7 @@
 
 Unsupervised pretraining such as Causal Language Modeling
 
-Instruction finetuning (Multi-task finetuning)
+Supervised Instruction finetuning (Multi-task finetuning)
 
 Alignment with RLHF
 
