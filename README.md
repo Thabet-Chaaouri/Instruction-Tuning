@@ -62,7 +62,7 @@ Training a 176 Billion parameter model needed the following hardware/software :
 
 - [Finetune 7B BLOOMZ with lora](https://www.philschmid.de/bloom-sagemaker-peft) : BLOOMZ 7b1 is the finetuned version from the pretrained [bloom 7b1](https://huggingface.co/bigscience/bloom-7b1). there is also a finetuned version for prompting in non english (ex: French) [bloomz-7b1-mt](https://huggingface.co/bigscience/bloomz-7b1-mt) a 7B parameters model, and a bigger one [bloomz-mt](https://huggingface.co/bigscience/bloomz-mt) of 176B parameters. The mt versions are finetuned on xP3mt, a Mixture of 13 training tasks in 46 languages with prompts in 20 languages (machine-translated from English).
 
-In this tutorial, the 7B BLOOMZ was finetuned using Lora and 8bit quantization(bnb) from Peft. The finetuning is a one single task (dialogue summarization) instruction tuning.
+  In this tutorial, the 7B BLOOMZ was finetuned using Lora and 8bit quantization(bnb) from Peft. The finetuning is a one single task (dialogue summarization) instruction tuning.
 
 -LLAMA2:
 
