@@ -30,21 +30,23 @@ FLAN fine-tunes T5 on a large set of varied instructions that use a simple and i
 
 FLAN-T5 model comes with many variants based on the numbers of parameters:
 
-** FLAN-T5 small (60M)
-** FLAN-T5 base (250M)
-** FLAN-T5 large (780M)
-** FLAN-T5 XL (3B)
-** FLAN-T5 XXL (11B)
+- FLAN-T5 small (60M)
+- FLAN-T5 base (250M)
+- FLAN-T5 large (780M)
+- FLAN-T5 XL (3B)
+- FLAN-T5 XXL (11B)
 
-- [Finetune base Flan T5](https://www.philschmid.de/fine-tune-flan-t5) : To reproduce the same experiment I had to use the Trainer on a T4 free colab but with a gradient_checkpointing and a combination of train_batch_size=32, fp16 mixed precision (I didn't finish the training, but it is said that fp16 leads to overflow issues with T5). It took 4 hours of training duration for the T5 base model (which is 250M parameters large). I tried to run the same experiment on a colab pro with NVIDIA V100 but it didn't work. I suppose that the memory of the p3.2xlarge AWS EC2 Instance use in the tutorial is a little bit larger. [Colab notebook](https://colab.research.google.com/drive/1_RZgtC-_cZUCrInpsLQwmZrIY-ijvNFR?usp=sharing)
-- [Finetune XL/XXL Flan T5 with deepspeed](https://www.philschmid.de/fine-tune-flan-t5-deepspeed) : The XXL FLAN T5 is an 11B model. there is no way to fully finetune the model in colab. the tutorial uses deepspeed on large EC2 instances with multiple GPUs.
+
+
+- [Full Finetuning of base Flan T5](https://www.philschmid.de/fine-tune-flan-t5) : In this experiment we do full finetuning of an instruction tuned model (FLAN) without leveraging efficient techniques. The finetuning is a one single task (dialogue summarization) instruction tuning. To reproduce the same experiment I had to use the Trainer on a T4 free colab but with a gradient_checkpointing and a combination of train_batch_size=32, fp16 mixed precision (I didn't finish the training, but it is said that fp16 leads to overflow issues with T5). It took 4 hours of training duration for the T5 base model (which is 250M parameters large). I tried to run the same experiment on a colab pro with NVIDIA V100 but it didn't work. I suppose that the memory of the p3.2xlarge AWS EC2 Instance use in the tutorial is a little bit larger. [Colab notebook](https://colab.research.google.com/drive/1_RZgtC-_cZUCrInpsLQwmZrIY-ijvNFR?usp=sharing)
+- [Full Finetuning of XL/XXL Flan T5 with deepspeed](https://www.philschmid.de/fine-tune-flan-t5-deepspeed) : In this experiment we do full finetuning of an instruction tuned model (FLAN) without leveraging efficient techniques. The finetuning is a one single task (news articles summarization) instruction tuning. The XXL FLAN T5 is an 11B model. there is no way to fully finetune the model in colab. the tutorial uses deepspeed on large EC2 instances with multiple GPUs.
 It starts with the preprocessing outside of the GPU instance then loading the tokenized dataset from disk and the deepspeed config file in the train script like this :
 ![Screenshot](sdfrere.PNG)
 Actually different experiments were conducted in this tutorial using different config deepspeed files:
 ![Screenshot](sdlkheio.PNG)
 As fp16 can overflow, bf16 is the better choice because it provides significant advantages over fp32. We see also that it is better to keep a small batch size and not do offloading than the other way around. [Colab notebook](https://colab.research.google.com/drive/1Kl2ojG83-cWTip9-_hj_2mH7rTTBj5Pj?usp=sharing)
-- [Finetune XXL Flan T5 with Lora](https://www.philschmid.de/fine-tune-flan-t5-peft) : In this tutorial, the 11B FLAN-T5 XXL was finetuned using Lora and 8bit quantization(bnb) from Peft.
-The same techniques were used for data preprocessing.
+- [Finetune XXL Flan T5 with Lora and 8bit quant](https://www.philschmid.de/fine-tune-flan-t5-peft) : In this tutorial, the 11B FLAN-T5 XXL was finetuned using Lora and 8bit quantization(bnb) from Peft.
+The same techniques were used for data preprocessing. The finetuning is a one single task (dialogue summarization) instruction tuning.
 The only differences was the construction of the peft model and the preparing for int8 training:
 ![Screenshot](Peft_training.PNG)
 This configuration uses only 0.16% of the parameters of the model. The training took 10h and cost ~13.22$. A full fine-tuning on FLAN-T5-XXL with the same duration (10h) requires 8x A100 40GBs and costs ~322$.
