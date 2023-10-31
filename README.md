@@ -94,8 +94,7 @@ However, the most exciting part of this release is the fine-tuned models (Llama 
 
   As we did this additional preprocessing,w e had to tokenize our input sequences and as result to use the simple Trainer and not the TRL SFTtrainer.
 
-  Finally when comparing the two experiments (using 4 accumulation steps and a train batch size of 2) on a T4 free colab GPU: the first experiment would take 330h and the second would take 32h.
-
+  Finally when comparing the two experiments (using 4 accumulation steps and a train batch size of 2) on a T4 free colab GPU: the first experiment would take 330h and the second would take 32h. If I choose a batch size larger than 2 I get CUDA out of memory. Checkout this [Colab notebook](https://colab.research.google.com/drive/1OOtPNwJLa3upPqGFkzJYxauo0YTSWtZ4)
     
 - [Deploying LLama2 on Sagemaker](https://www.philschmid.de/sagemaker-llama-llm)
 
