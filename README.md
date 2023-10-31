@@ -104,7 +104,7 @@ However, the most exciting part of this release is the fine-tuned models (Llama 
 
   Basically the blog uses the same data, preprocessing steps, and same parameters for the Lora adapters and the model, so we preprocess, tokenize and pack multiple samples to sequences of 2048 length. Using the Falcon tokenizer we get 1300 sample instead of 1500 sample with the LLaMA tokenizer on the same data.
 
-  We use the simple Trainer for training (not SFTTrainer), we launch training but we hit Cuda out of memory, I think because I am using more parameters for Falcon. Actually for this exeriment I used afunction
+  We use the simple Trainer for training (not SFTTrainer), we launch training but we hit Cuda out of memory, I think because I am using more parameters for Falcon (Falcon has 200M additional parameters than LLaMA for the 7B versions). Actually for this experiment I used a function copied from https://github.com/artidoro/qlora/blob/main/qlora.py to identify the layers for which we would create adapters. Creating adapters for those layers with 64 rank I am almost training 2% of the model parameters. so I tried to reduce the rank from 64 to 32 and 16 and tried to reduce the number of layers to which create adapters but still hit out of memory even with 0.1% lora parameters. So I conclude that it is not possible to train The 7B Falcon on the T4 GPU colab. Checkout this [Colab notebook](https://colab.research.google.com/drive/18ZCxs73eIzOqxVzoJvKMtlTif1apS6fW#scrollTo=WFI_msO_J5X-)
   
 - [Finetune Falcon using Qlora with Flash Attention](https://www.philschmid.de/sagemaker-falcon-180b-qlora)
 - [Finetune Falcon with deepspeed and Lora](https://www.philschmid.de/deepspeed-lora-flash-attention)
