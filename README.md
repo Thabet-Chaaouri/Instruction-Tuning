@@ -92,7 +92,7 @@ However, the most exciting part of this release is the fine-tuned models (Llama 
 - [Finetune LLAMA2 using Qlora](https://www.philschmid.de/sagemaker-llama2-qlora)
   In this blog, LLaMA2 was instruction-tuned (on multi task instructions using dolly 15k dataset) using Qlora to fit training into a T4 tier colab. Comparing this experiment to the previous one, additional preprocessing was conducted to pack multiple samples to one sequence of 2048 length to have a more efficient training so that we passed from 15K samples (to train on in the previous experiment) to 1591 sequence to train on.
 
-  As we did this additional preprocessing,w e had to tokenize our input sequences and as result to use the simple Trainer and not the TRL SFTtrainer.
+  As we did this additional preprocessing, we had to tokenize our input sequences and as result to use the simple Trainer and not the TRL SFTtrainer.
 
   Finally when comparing the two experiments (using 4 accumulation steps and a train batch size of 2) on a T4 free colab GPU: the first experiment would take 330h and the second would take 32h. If I choose a batch size larger than 2 I get CUDA out of memory. Checkout this [Colab notebook](https://colab.research.google.com/drive/1OOtPNwJLa3upPqGFkzJYxauo0YTSWtZ4)
     
@@ -100,6 +100,12 @@ However, the most exciting part of this release is the fine-tuned models (Llama 
 
 -Falcon:
 - [Finetune Falcon with QLora](https://www.philschmid.de/sagemaker-falcon-qlora)
+  I tried to follow this blog and instruct-tune (Multi task instructions using the Dolly15K dataset) a pretrained Falcon-7B model on T4 GPU free colab, although in the blog we finetune the 40B model on SagemMaker.
+
+  Basically the blog uses the same data, preprocessing steps, and same parameters for the Lora adapters and the model, so we preprocess, tokenize and pack multiple samples to sequences of 2048 length. Using the Falcon tokenizer we get 1300 sample instead of 1500 sample with the LLaMA tokenizer on the same data.
+
+  We use the simple Trainer for training (not SFTTrainer), we launch training but we hit Cuda out of memory, I think because I am using more parameters for Falcon. Actually for this exeriment I used afunction
+  
 - [Finetune Falcon using Qlora with Flash Attention](https://www.philschmid.de/sagemaker-falcon-180b-qlora)
 - [Finetune Falcon with deepspeed and Lora](https://www.philschmid.de/deepspeed-lora-flash-attention)
 
