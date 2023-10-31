@@ -90,6 +90,13 @@ However, the most exciting part of this release is the fine-tuned models (Llama 
   Note that this way, we did not have to do the tokenization (with the truncation & padding) nor preparing the data collators beforehand. The SFTTrainer from trl took care of that. Checkout this [Colab notebook](https://colab.research.google.com/drive/1KgC3TUBIDBf-tsuLYKiAnUdE2-mOLzZg)
    
 - [Finetune LLAMA2 using Qlora](https://www.philschmid.de/sagemaker-llama2-qlora)
+  In this blog, LLaMA2 was instruction-tuned (on multi task instructions using dolly 15k dataset) using Qlora to fit training into a T4 tier colab. Comparing this experiment to the previous one, additional preprocessing was conducted to pack multiple samples to one sequence of 2048 length to have a more efficient training so that we passed from 15K samples (to train on in the previous experiment) to 1591 sequence to train on.
+
+  As we did this additional preprocessing,w e had to tokenize our input sequences and as result to use the simple Trainer and not the TRL SFTtrainer.
+
+  Finally when comparing the two experiments (using 4 accumulation steps and a train batch size of 2) on a T4 free colab GPU: the first experiment would take 330h and the second would take 32h.
+
+    
 - [Deploying LLama2 on Sagemaker](https://www.philschmid.de/sagemaker-llama-llm)
 
 -Falcon:
