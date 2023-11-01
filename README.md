@@ -108,7 +108,7 @@ The models were trained and evaluated using the bfloat16, so it is better to use
 
 For inference, you need to allow remote code execution. you would prefer bfloat 16 and for the specificity of 40B model, you can load the model in 8-bit to run in about about 45 GB of RAM (but will use torch.float16 instead of torch.bfloat16) or load it in 4bit which would take 27GB of GPU.
 
-
+Checkout this [blog](https://huggingface.co/blog/falcon) from HF.
 
 - [Finetune Falcon with QLora](https://www.philschmid.de/sagemaker-falcon-qlora)
   I tried to follow this blog and instruct-tune (Multi task instructions using the Dolly15K dataset) a pretrained Falcon-7B model on T4 GPU free colab, although in the blog we finetune the 40B model on SagemMaker.
