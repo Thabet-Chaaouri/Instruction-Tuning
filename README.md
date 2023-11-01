@@ -99,6 +99,17 @@ However, the most exciting part of this release is the fine-tuned models (Llama 
 - [Deploying LLama2 on Sagemaker](https://www.philschmid.de/sagemaker-llama-llm)
 
 -Falcon:
+
+Falcon is a new family of state-of-the-art language models created by the Technology Innovation Institute, it comes in 3 versions : Falcon-40B, its little brother Falcon-7B and Falcon-180B introduced later. TII has also made available instruct versions of the models, Falcon-7B-Instruct, Falcon-40B-Instruct and Falcon-180B-chat.
+
+Falcon-7B and Falcon-40B have been trained on 1.5 trillion and 1 trillion tokens respectively. one particularity, is their training data, predominantly based (>80%) on RefinedWeb (data based on CommonCrawl but with better quality, leveraging large-scale deduplication and strict filtering to match the quality of other corpora.). Another interesting feature of the Falcon models is their use of multiquery attention. The vanilla multihead attention scheme has one query, key, and value per head; multiquery instead shares one key and value across all heads.
+
+The models were trained and evaluated using the bfloat16, so it is better to use the same datatype. This requires a recent version of CUDA and works best on modern cards. 
+
+For inference, you need to allow remote code execution. you would prefer bfloat 16 and for the specificity of 40B model, you can load the model in 8-bit to run in about about 45 GB of RAM (but will use torch.float16 instead of torch.bfloat16) or load it in 4bit which would take 27GB of GPU.
+
+
+
 - [Finetune Falcon with QLora](https://www.philschmid.de/sagemaker-falcon-qlora)
   I tried to follow this blog and instruct-tune (Multi task instructions using the Dolly15K dataset) a pretrained Falcon-7B model on T4 GPU free colab, although in the blog we finetune the 40B model on SagemMaker.
 
