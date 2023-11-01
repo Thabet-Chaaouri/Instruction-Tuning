@@ -125,3 +125,4 @@ Checkout this [blog](https://huggingface.co/blog/falcon) from HF.
 
 -Compare GPTQ and bnb:
 - [GPTQ and Hugging Face Optimum](https://www.philschmid.de/gptq-llama)
+- [AutoGPTQ and transformers](https://huggingface.co/blog/gptq-integration)
