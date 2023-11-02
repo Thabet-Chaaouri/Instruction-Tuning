@@ -129,7 +129,7 @@ Mistral 7B uses Grouped-query attention (GQA) for faster inference and Sliding W
 
 It outperforms LLaMA2 13B on all benchmarks and it claims to performs equivalently to a Llama 2 that would be more than 3x its size. checkout this [blog](https://mistral.ai/news/announcing-mistral-7b/) from the Mistral team.
 
-Checkout this [colab](https://colab.research.google.com/drive/1dOwRPsdLYi_dMxO2TrktLvMlW0k2QBh0?authuser=0#scrollTo=rkGci_u6psuE) notebook, I used to finetune the mistral 7B model on the Guanaco dataset. I had to use the T4 GPU with augmented memory from colab pro to download the model. Otherwise you can download a sharded model using the free T4 GPU.
+Checkout this [colab](https://colab.research.google.com/drive/1dOwRPsdLYi_dMxO2TrktLvMlW0k2QBh0?authuser=0#scrollTo=rkGci_u6psuE) notebook, I used to finetune the mistral 7B model on the Guanaco dataset. I had to use the T4 GPU with augmented CPU memory from colab pro to download the model because at  loading time, CPU RAM is insufficient, and out-of-memory errors occur. Otherwise you can download a sharded model using the free T4 GPU. there is this sharded model by Youness in "ybelkada/Mistral-7B-v0.1-bf16-sharded"
 
 -Compare GPTQ and bnb:
 - [GPTQ and Hugging Face Optimum](https://www.philschmid.de/gptq-llama)
