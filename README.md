@@ -120,8 +120,14 @@ Checkout this [blog](https://huggingface.co/blog/falcon) from HF.
 - [Finetune Falcon using Qlora with Flash Attention](https://www.philschmid.de/sagemaker-falcon-180b-qlora)
 - [Finetune Falcon with deepspeed and Lora](https://www.philschmid.de/deepspeed-lora-flash-attention)
 
+
 -Mistral:
 
+Mistral-7b has been recently released (in the end of Sep)and is known as one of the best open source LLM as of today. it is the most powerful language model for its size (Which I think is very clever from the Mistral team as 7B is the accessible size for the large community to run on proprietary GPUs. This would make Mistral7B as popular as LLaMA2.)
+
+Mistral 7B uses Grouped-query attention (GQA) for faster inference and Sliding Window Attention (SWA) to handle longer sequences at smaller cost. 
+
+It outperforms LLaMA2 13B on all benchmarks and it claims to performs equivalently to a Llama 2 that would be more than 3x its size. checkout this [blog](https://mistral.ai/news/announcing-mistral-7b/) from the Mistral team.
 
 -Compare GPTQ and bnb:
 - [GPTQ and Hugging Face Optimum](https://www.philschmid.de/gptq-llama)
