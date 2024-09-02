@@ -146,3 +146,4 @@ Zephyr is a series of language models that are trained to act as helpful assista
 Cheat notebooks for instruction-tuning :
 - Checkout this [Colab notebook about finetuning Llama2 with SFTTrainer](https://colab.research.google.com/drive/1KgC3TUBIDBf-tsuLYKiAnUdE2-mOLzZg)
 - Checkout this [more recent colab notebook about finetuning Llama2 with SFTTrainer](https://colab.research.google.com/drive/1vJ4ADFwn123UCGHKk6LiqN_Tqcjlemsn#scrollTo=Gw1cz-9-iW7x)
+- I have other notebooks finetuning Mistral and Zephyr
