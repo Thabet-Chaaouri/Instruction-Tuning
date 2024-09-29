@@ -155,7 +155,8 @@ For finetuning the vision models, checkout this notebooks:
 Qwen2.5, in addition to continuing to open source the four models of 0.5/1.5/7/72B of the same size as Qwen2, also added two medium-sized cost-effective models of Qwen2.5-14B and Qwen2.5-32B and a mobile-side model called Qwen2.5-3B. Qwen2.5 has acquired significantly more knowledge.
 
 The Qwen2.5-72B base model significantly outperforms its peers in the same category across a wide range of tasks. It achieves results comparable to Llama-3-405B while utilizing only one-fifth of the parameters.
-The Qwen2.5-72B-Instruct model delivers exceptional performance, even surpassing the larger Llama-3.1-405B in several critical tasks.
+The Qwen2.5-72B-Instruct model delivers exceptional performance, even surpassing the larger Llama-3.1-405B in several critical tasks. 
+Compared to other models with open weights, Qwen 2.5-72B-Instruct beats LLama 3.1 405B Instruct and Mistral Large 2 Instruct (123 billion parameters) on seven of 14 benchmarks including LiveCodeBench, MATH (solving math word problems), and MMLU (answering questions on a variety of topics).
 The 7B model seems very intersting. check out performances [here](https://qwenlm.github.io/blog/qwen2.5-llm/?utm_campaign=The%20Batch&utm_medium=email&_hsenc=p2ANqtz-_40JQm9RW0mlDYx0xnAmSIob4F-iptRZ7yyYr_IPSUgKSwykBsDyCZEBaoKW-YWbZ8Tf_KWy3et-_NPrnaCqh9sjEuuA&_hsmi=326292888&utm_content=326276653&utm_source=hs_email)
 
 
