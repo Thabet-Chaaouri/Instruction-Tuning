@@ -138,6 +138,22 @@ Zephyr is a series of language models that are trained to act as helpful assista
 ![Screenshot](Zephyr_Beta_eval.PNG)
 
 
+-LLAMA3.2:
+
+Two families were released, the multimodal family and the multilingual one.
+
+The Llama 3.2-Vision collection of multimodal large language models (LLMs) is a collection of pretrained and instruction-tuned image reasoning generative models in 11B and 90B sizes (text + images in / text out).
+
+Model Architecture: Llama 3.2-Vision is built on top of Llama 3.1 text-only model. To the best of our understanding, the text models were frozen during the training of the vision models to preserve text-only performance. To support image recognition tasks, the Llama 3.2-Vision model uses a separately trained vision adapter that integrates with the pre-trained Llama 3.1 language model. The adapter consists of a series of cross-attention layers that feed image encoder representations into the core LLM. Note for image+text applications, English is the only language supported. Vision models have a context length of 128k tokens, which allows for multiple-turn conversations that may contain images. However, the model works best when attending to a single image, so the transformers implementation only attends to the last image provided in the input. This preserves quality and saves memory.
+
+For finetuning the vision models, checkout this notebooks:
+- using [HF Trainer](https://github.com/huggingface/huggingface-llama-recipes/blob/main/Llama-Vision%20FT.ipynb)
+- Using [TRL](https://github.com/huggingface/trl/blob/main/examples/scripts/sft_vlm.py)
+
+-QWEN2.5:
+
+-Molmo:
+
 -Compare GPTQ and bnb:
 - [GPTQ and Hugging Face Optimum](https://www.philschmid.de/gptq-llama)
 - [AutoGPTQ and transformers](https://huggingface.co/blog/gptq-integration)
@@ -150,9 +166,5 @@ Cheat notebooks for instruction-tuning :
 - checkout this [Colab notebook about finetuning with Axolotl](https://colab.research.google.com/drive/1wGymSyJN8qravejmCh0AAqJ1F-pVgrD6#scrollTo=b5SpoBI5OABj)
 
 
--LLAMA3.2:
 
--QWEN2.5:
-
--Molmo:
 
