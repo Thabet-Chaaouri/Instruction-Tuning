@@ -148,3 +148,11 @@ Cheat notebooks for instruction-tuning :
 - Checkout this [more recent colab notebook about finetuning Llama2 with SFTTrainer](https://colab.research.google.com/drive/1vJ4ADFwn123UCGHKk6LiqN_Tqcjlemsn#scrollTo=Gw1cz-9-iW7x)
 - I have other notebooks finetuning Mistral and Zephyr with libraires from TRL and transformers
 - checkout this [Colab notebook about finetuning with Axolotl](https://colab.research.google.com/drive/1wGymSyJN8qravejmCh0AAqJ1F-pVgrD6#scrollTo=b5SpoBI5OABj)
+
+
+-LLAMA3.2:
+
+-QWEN2.5:
+
+-Molmo:
+
