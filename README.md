@@ -160,6 +160,8 @@ Compared to other models with open weights, Qwen 2.5-72B-Instruct beats LLama 3.
 The 7B model seems very intersting. check out performances [here](https://qwenlm.github.io/blog/qwen2.5-llm/?utm_campaign=The%20Batch&utm_medium=email&_hsenc=p2ANqtz-_40JQm9RW0mlDYx0xnAmSIob4F-iptRZ7yyYr_IPSUgKSwykBsDyCZEBaoKW-YWbZ8Tf_KWy3et-_NPrnaCqh9sjEuuA&_hsmi=326292888&utm_content=326276653&utm_source=hs_email)
 
 
+-QWEN-VL-72B
+
 -Molmo:
 
 -Compare GPTQ and bnb:
