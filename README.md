@@ -160,9 +160,14 @@ Compared to other models with open weights, Qwen 2.5-72B-Instruct beats LLama 3.
 The 7B model seems very intersting. check out performances [here](https://qwenlm.github.io/blog/qwen2.5-llm/?utm_campaign=The%20Batch&utm_medium=email&_hsenc=p2ANqtz-_40JQm9RW0mlDYx0xnAmSIob4F-iptRZ7yyYr_IPSUgKSwykBsDyCZEBaoKW-YWbZ8Tf_KWy3et-_NPrnaCqh9sjEuuA&_hsmi=326292888&utm_content=326276653&utm_source=hs_email)
 
 
--QWEN-VL-72B
 
 -Molmo:
+Molmo is a family of open vision-language models developed by the Allen Institute for AI. Molmo models are trained on PixMo, a dataset of 1 million, highly-curated image-text pairs.
+
+Molmo 72B is based on Qwen2-72B and uses OpenAI CLIP as vision backbone. Molmo-72B achieves the highest academic benchmark score and ranks second on human evaluation, just slightly behind GPT-4o.
+
+-QWEN-VL-72B
+
 
 -Compare GPTQ and bnb:
 - [GPTQ and Hugging Face Optimum](https://www.philschmid.de/gptq-llama)
