@@ -98,6 +98,10 @@ However, the most exciting part of this release is the fine-tuned models (Llama 
     
 - [Deploying LLama2 on Sagemaker](https://www.philschmid.de/sagemaker-llama-llm)
 
+After Llama2, Llama3, 3.1 and 3.2 were realesed. Below a table summarizing the differences between the versions:
+
+![Screenshot](llama_family.PNG)
+
 -Falcon:
 
 Falcon is a new family of state-of-the-art language models created by the Technology Innovation Institute, it comes in 3 versions : Falcon-40B, its little brother Falcon-7B and Falcon-180B introduced later. TII has also made available instruct versions of the models, Falcon-7B-Instruct, Falcon-40B-Instruct and Falcon-180B-chat.
