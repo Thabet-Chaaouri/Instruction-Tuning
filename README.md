@@ -141,6 +141,17 @@ Zephyr is a series of language models that are trained to act as helpful assista
 
 ![Screenshot](Zephyr_Beta_eval.PNG)
 
+-Les ministraux : Ministral 3B and 8B
+
+released on october 16th 2024 under the Mistral Research License (a paid license is required for commercial use). The model weights for Ministral 8B Instruct are available for research use.
+
+Considered among the world's best edge models (sub-10B categorie), 3B base model outperforms Gemma 2B and Llama3.2 3B, the instruct model outperforms the mistram 7B. The 8B base model outeperforms Llama 3.1 8B.
+
+The models can be used or tuned to a variety of uses, from orchestrating agentic workflows to creating specialist task workers. can be used  in conjunction with larger language models such as 4o, les Ministraux are also efficient intermediaries for function-calling in multi-step agentic workflows. They can be tuned to handle input parsing, task routing, and calling APIs based on user intent across multiple contexts at extremely low latency and cost.
+
+Both models support up to 128k context length (currently 32k on vLLM) and Ministral 8B has a special interleaved sliding-window attention pattern for faster and memory-efficient inference
+
+![Screenshot](Mistral_models.PNG)
 
 -LLAMA3.2:
 
