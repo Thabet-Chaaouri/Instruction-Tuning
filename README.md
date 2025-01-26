@@ -194,6 +194,8 @@ To address these issues DeepSeek-R1, incorporates cold-start data before RL and 
 
 Deepseek released also six dense models distilled from DeepSeek-R1 based on Llama and Qwen. They demonstrate that the reasoning patterns of larger models can be distilled into smaller models, resulting in better performance compared to the reasoning patterns discovered through RL on small models. DeepSeek-R1-Distill-Qwen-32B outperforms OpenAI-o1-mini across various benchmarks.
 
+![Screenshot](Deepseek-distill-models.PNG)
+
 
 -Compare GPTQ and bnb:
 - [GPTQ and Hugging Face Optimum](https://www.philschmid.de/gptq-llama)
