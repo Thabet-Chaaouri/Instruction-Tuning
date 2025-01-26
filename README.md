@@ -183,6 +183,17 @@ Molmo 72B is based on Qwen2-72B and uses OpenAI CLIP as vision backbone. Molmo-7
 
 -QWEN-VL-72B
 
+- Deepseek R1 Zero & Deepseek R1:
+DeepSeek-R1-Zero & DeepSeek-R1 are trained based on DeepSeek-V3-Base.
+
+![Screenshot](Deepseek-params.PNG)
+
+DeepSeek-R1-Zero, a model trained via large-scale reinforcement learning (RL) without supervised fine-tuning (SFT) as a preliminary step. This approach allows the model to explore chain-of-thought (CoT) for solving complex problems. It has remarkable performance on reasoning, However, DeepSeek-R1-Zero encounters challenges such as endless repetition, poor readability, and language mixing. 
+
+To address these issues DeepSeek-R1, incorporates cold-start data before RL and achieves performance comparable to OpenAI-o1 across math, code, and reasoning tasks.
+
+Deepseek released also six dense models distilled from DeepSeek-R1 based on Llama and Qwen. They demonstrate that the reasoning patterns of larger models can be distilled into smaller models, resulting in better performance compared to the reasoning patterns discovered through RL on small models. DeepSeek-R1-Distill-Qwen-32B outperforms OpenAI-o1-mini across various benchmarks.
+
 
 -Compare GPTQ and bnb:
 - [GPTQ and Hugging Face Optimum](https://www.philschmid.de/gptq-llama)
