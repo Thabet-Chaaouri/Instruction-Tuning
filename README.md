@@ -183,7 +183,8 @@ Molmo 72B is based on Qwen2-72B and uses OpenAI CLIP as vision backbone. Molmo-7
 
 -QWEN-VL-72B
 
-- Deepseek R1 Zero & Deepseek R1:
+-Deepseek R1 Zero & Deepseek R1:
+
 DeepSeek-R1-Zero & DeepSeek-R1 are trained based on DeepSeek-V3-Base.
 
 ![Screenshot](Deepseek-params.PNG)
